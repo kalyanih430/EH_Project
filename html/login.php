@@ -16,6 +16,7 @@ if(isset($_POST['Login'])) {
 
 		if(isset($_POST['remember'])) {
 			setcookie('Username', $username, time()+60*2);
+			setcookie('Password', $password, time()+60*2);
 		}
 		session_start();
 		$_SESSION['Username']= $username;
@@ -23,12 +24,12 @@ if(isset($_POST['Login'])) {
 		#echo "Login Successfull !! Welcome".$row["Name"];
 	} else {
 		echo "Failed to login. <br> click here to <a
-			href = 'index.html'>try again</a>";
+			href = 'index.php'>try again</a>";
 	}
 
 
 } else { 
-	 header("location: index.html");
+	 header("location: index.php");
 }
 
 ?>
