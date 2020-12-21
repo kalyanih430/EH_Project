@@ -1,0 +1,17 @@
+body {
+  background-color: powderblue;
+}
+
+.comment-box {
+	width:845px;
+	padding:20px;
+	margin-bottim:4px;
+	background-color: #fff;
+	border-radius:4px;
+}
+
+.topnav-right {
+  float: right;
+}
+
+

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $data = $_POST;
 
 if (empty($data['Name']) || empty($data['password']) || empty($data['email']) || empty($data['cpassword']))
@@ -36,6 +36,7 @@ if($num == 1)
 	$reg = " Insert into users (Name, email_address, password) values ('$username', '$email','$setpassword')";
 	mysqli_query($con, $reg);
 	echo "Successfully Registered";
+	$_SESSION['Name'] = '$username';
 }
 
 ?>

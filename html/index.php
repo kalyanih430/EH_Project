@@ -2,6 +2,19 @@
 
 	<head>
 		<title>Landing Page</title>
+		<style>
+			body {
+			text-align: center;
+ 			background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-ancient-style-watercolor-creation-civilized-city-background-backgroundcity-silhouettesimpleatmospheregeometrycity-backgroundgradientglare-image_74850.jpg");
+  			height: 100%;
+			background-position: center;
+ 		        background-repeat: no-repeat;
+  			background-size: cover;
+			}
+			form {
+    			display: inline-block;
+			}
+		</style>
 	</head>
  
 	<body>
@@ -14,7 +27,7 @@
 			<label for "Password"><b>Password:<b></label>
 			<input type= "password" name="Password" placeholder="Password" id="Password"required><br><br>
 			<input type= "submit" name="Login"value="Login">
-			<input type="checkbox" name ="remember" value="1">Remember Me
+			<input type="checkbox" name ="remember" value="1">Remember Me<br>
 		</form>
 
 		<form action="register.php" method="POST">

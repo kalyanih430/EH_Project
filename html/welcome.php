@@ -1,5 +1,4 @@
 <?php
-//include 'functions.php';
 session_start();
 
 $conn = mysqli_connect('localhost','admin','adpassword','EH_Project');
@@ -10,32 +9,82 @@ $conn = mysqli_connect('localhost','admin','adpassword','EH_Project');
 
 echo "Login Successfull !! Welcome ".$_SESSION['Username'];
 
+
+
 ?>
 
 <html>
-	</body>
+<head>
 
-	<form method='POST' action='functions.php'>
-	    <input type='hidden' name='Name' value='Anonymous'>
-	    <textarea name='Comment' id='Comment'  cols="50" rows="2" placeholder="Enter a comment"></textarea><br>
+	<style>
+		body {
+			
+ 			background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-watercolor-color-city-background-design-backgroundcity-backgroundbackground-materialcivilizationgreen-image_70171.jpg	");
+  			height: 100%;
+			background-position: center;
+ 		        background-repeat: no-repeat;
+  			background-size: cover;
+			}
+		
+		
+		.comment-box {
+	    		width: 320px;
+  			padding: 10px;
+  			border: 1px solid gray;
+  			margin: 0;
+			}
+		.topnav-right {
+  			float: right;
+			}
+	</style>
+
+
+  <div class="topnav-right">
+    <a href="#Profile">Profile</a> <br>
+   <a href="#search">Search</a>  <a href='logout.php'><br>Logout</a>
+  </div>
+</div>
+
+	  <form method='POST' action='functions.php'>
+		<h4>Post a comment:</h4>
+	  
+	    <input name="Name" type="text" placeholder="Your Name" required><br>
+	    <textarea name='Comment' id='Comment'  cols="50" rows="2" placeholder="Enter a comment"></textarea><br><br>
  	     <button type = 'submit' name='CommentSubmit'>Comment</button>
+		
 	 </form>
 
-	<form method='POST' action='show_comments.php'>
- 	     <button type = 'submit' name='ShowComment'>Show Previous Comments</button>
-	 </form>	
+
+
+
+	<?php
+
+
+	$conn = mysqli_connect('localhost','admin','adpassword','EH_Project');
+        if(!$conn)
+        {
+              die("Could not connect:".mysqli_error());
+        }
+	
+	$sql = "SELECT name,comment from comments";
+	$result= $conn-> query($sql);
+	echo "<h2>Comments</h2>";
+	while($row = $result->fetch_assoc()) {
+		echo "<div class='comment-box'>";
+		echo $row['name']."<br>";
+		echo $row['comment'];
+		echo "</div>";
+	}
+	
+
+	?>	
 
     </body>
 
 </html>
 
 
-<?php
 
-echo "Thank you for visiting!!";
-echo "<a href='logout.php'><br>Logout</a>";
-
-?>
 
 
 
