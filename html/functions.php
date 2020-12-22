@@ -27,6 +27,7 @@ if (isset($_POST['CommentSubmit']))
 {
 	
 	$comment  = $_POST['Comment'];
+	
  
 	$sql = "INSERT INTO comments (name, comment) VALUES ('$username', '$comment')";
 	if (mysqli_query($conn, $sql)) {

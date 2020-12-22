@@ -40,8 +40,8 @@ echo "Login Successfull !! Welcome ".$_SESSION['Username'];
 
 
   <div class="topnav-right">
-    <a href="#Profile">Profile</a> <br>
-   <a href="#search">Search</a>  <a href='logout.php'><br>Logout</a>
+    <a href='profile.php'><br>Profile</a> <br>
+   <a href='search.php'><br>Search</a> <br> <a href='logout.php'><br>Logout</a>
   </div>
 </div>
 
