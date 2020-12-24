@@ -39,10 +39,9 @@ echo "Login Successfull !! Welcome ".$_SESSION['Username'];
 	</style>
 
 
-  <div class="topnav-right">
-    <a href='profile.php'><br>Profile</a> <br>
-   <a href='search.php'><br>Search</a> <br> <a href='logout.php'><br>Logout</a>
-  </div>
+<div class="topnav-right">
+    <a href='profile.php'><br><b>Profile<b></a> <br>
+   <a href='search.php'><br><b>Search<b></a> <br> <a href='logout.php'><br><b>Logout<b></a>
 </div>
 
 	  <form method='POST' action='functions.php'>
@@ -53,8 +52,6 @@ echo "Login Successfull !! Welcome ".$_SESSION['Username'];
  	     <button type = 'submit' name='CommentSubmit'>Comment</button>
 		
 	 </form>
-
-
 
 
 	<?php

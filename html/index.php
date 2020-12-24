@@ -27,11 +27,11 @@
 			<label for "Password"><b>Password:<b></label>
 			<input type= "password" name="Password" placeholder="Password" id="Password"required><br><br>
 			<input type= "submit" name="Login"value="Login">
-			<input type="checkbox" name ="remember" value="1">Remember Me<br>
+			<input type="checkbox" name ="remember" value="1">Remember Me<br><br>
 		</form>
 
 		<form action="register.php" method="POST">
-			<input type= "submit" name="Register" value="Register">
+		<input type= "submit" name="Register" value="Register">
 		</form>
 	</body>
 

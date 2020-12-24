@@ -31,15 +31,13 @@ if (isset($_POST['CommentSubmit']))
  
 	$sql = "INSERT INTO comments (name, comment) VALUES ('$username', '$comment')";
 	if (mysqli_query($conn, $sql)) {
-		echo "Comment Inserted";
+		header("location: welcome.php");
 	} else {
-      		echo "Error: " . $sql . "<br>" . mysqli_error($con);
+      		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
 	
 }
 }
-
-
 
 ?>
 		

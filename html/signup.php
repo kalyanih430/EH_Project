@@ -35,8 +35,9 @@ if($num == 1)
 
 	$reg = " Insert into users (Name, email_address, password) values ('$username', '$email','$setpassword')";
 	mysqli_query($con, $reg);
-	echo "Successfully Registered";
 	$_SESSION['Name'] = '$username';
+	header("location: index.php");
+	
 }
 
 ?>
