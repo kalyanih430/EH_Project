@@ -4,7 +4,7 @@
 	<style>
 		body {
 
- 			background-image: url("https://previews.123rf.com/images/vska/vska1505/vska150500080/39876782-new-future-technology-concept-abstract-background-for-business-solution.jpg");
+ 			background-image: url("https://i.pinimg.com/originals/0d/af/b7/0dafb7928a99a9cb552a941895a6e586.jpg");
   			height: 100%;
 			background-position: center;
  		        background-repeat: no-repeat;
