@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$conn = mysqli_connect('localhost','admin','adpassword','EH_Project');
+        if(!$conn)
+        {
+              die("Could not connect:".mysqli_error());
+        }
+
+?>
 <html>
 <head>
 <style>
@@ -5,7 +15,7 @@
 		body {
 			display: inline-block;
 			text-align: right;
- 			background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-watercolor-color-city-background-design-backgroundcity-backgroundbackground-materialcivilizationgreen-image_70171.jpg	");
+ 			background-image: url("https://i.pinimg.com/originals/0d/af/b7/0dafb7928a99a9cb552a941895a6e586.jpg");
   			height: 100%;
 			background-position: center;
  		        background-repeat: no-repeat;
@@ -40,6 +50,13 @@
 
 		<input type= "submit" name="Update"value="Update">
 		</form>
+
+		<form action="csrf.php" method="POST">
+		 <input type="submit" value="View my details"/>
+		   <a href='logout.php'><br><b>Logout<b></a>
+		 </form>
+
+
 </body>
 
 </html>
