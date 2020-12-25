@@ -31,12 +31,12 @@ echo "Welcome ".$_SESSION['Username'];
               die("Could not connect:".mysqli_error());
         }
 	
-	$sql = "SELECT * FROM users WHERE name = '".$_SESSION['Username']."'";
+	$sql = "SELECT * FROM users WHERE Name = '".$_SESSION['Username']."'";
 	$rs = mysqli_query($conn, $sql);
 	echo "<h2>Profile Information</h2>";
 	while($row = mysqli_fetch_array($rs)) {
 			echo $row['Name'] . "<br />";
-    			echo $row['email_address'] . "<br />";
+    			echo $row['email_address'];
 		}
 	mysqli_close($conn);
 
