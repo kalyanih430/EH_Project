@@ -5,7 +5,7 @@
 		<style>
 			body {
 			text-align: center;
- 			background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-ancient-style-watercolor-creation-civilized-city-background-backgroundcity-silhouettesimpleatmospheregeometrycity-backgroundgradientglare-image_74850.jpg");
+ 			background-image: url("https://i.pinimg.com/originals/0d/af/b7/0dafb7928a99a9cb552a941895a6e586.jpg");
   			height: 100%;
 			background-position: center;
  		        background-repeat: no-repeat;
