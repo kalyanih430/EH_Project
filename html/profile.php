@@ -3,15 +3,11 @@
 
 	<style>
 		body {
-			text-align: center;
- 			background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/48/50/00585a3568a0a7d.jpg");
-  			height: 100%;
+			text-align: left;
+ 			background-image: url("https://besthqwallpapers.com/Uploads/11-4-2020/128600/thumb2-purple-spring-flowers-flower-vase-stylish-pink-vase-flowers-on-the-table-spring.jpg");
 			background-position: center;
  		        background-repeat: no-repeat;
   			background-size: cover;
-			}
-		p 	{
- 			font-size: 0.875em;
 			}
 	</style>
 
@@ -22,7 +18,7 @@
 
 <?php
 session_start();
-echo "Welcome ".$_SESSION['Username'];
+echo "<h1>Welcome ".$_SESSION['Username']."</h1>";
 
 
 	$conn = mysqli_connect('localhost','admin','adpassword','EH_Project');
@@ -33,10 +29,10 @@ echo "Welcome ".$_SESSION['Username'];
 	
 	$sql = "SELECT * FROM users WHERE Name = '".$_SESSION['Username']."'";
 	$rs = mysqli_query($conn, $sql);
-	echo "<h2>Profile Information</h2>";
+	echo "<h2>Profile Information : </h2>";
 	while($row = mysqli_fetch_array($rs)) {
-			echo $row['Name'] . "<br />";
-    			echo $row['email_address'];
+			echo "<h3><b>Username :</h3></b>".$row['Name']. "<br />";
+    			echo "<h3><b>Email Address :</h3></b>".$row['email_address'] ."<br />";
 		}
 	mysqli_close($conn);
 
