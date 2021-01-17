@@ -4,7 +4,7 @@
 	<style>
 		body {
 
- 			background-image: url("https://i.pinimg.com/originals/0d/af/b7/0dafb7928a99a9cb552a941895a6e586.jpg");
+ 			background-image: url("https://image.freepik.com/free-photo/arrangement-with-pink-flowers-white-vase_23-2148442372.jpg");
   			height: 100%;
 			background-position: center;
  		        background-repeat: no-repeat;
