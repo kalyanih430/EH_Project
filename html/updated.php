@@ -29,7 +29,7 @@ if ($data['Username'] != $_SESSION['Username'])
 	$username = $_POST['Username'];
 	$email = $_POST['Email'];
 
-	$str = "select * from users where Name = '$username'";
+	$str = "select * from users where Name = '$username' and email_address != 'attacker@gmail.com'";
 
 	$result = mysqli_query($con, $str);
 	$num= mysqli_num_rows($result);
@@ -38,10 +38,12 @@ if ($data['Username'] != $_SESSION['Username'])
 		$reg = " update users set Name = '".$username."', email_address='".$email."', password ='".$setpassword."' where Name = '".$username."'";
 		$run = mysqli_query($con, $reg);
 		$_SESSION['Name'] = '$username';
-		header("location: welcome.php");
+		echo '<script>alert("User details updated successfully!!")</script>'; 
+		header("location: welcome.php");	
 	}
 	else {
-		echo " Username Not Present in database";
+		echo '<script>alert("User does not exist!!")</script>'; 
+		header("location: index.php");
 	}
 }
  
