@@ -5,7 +5,7 @@
 		<style>
 			body {
 			text-align: center;
- 			background-image: url("https://i.pinimg.com/originals/0d/af/b7/0dafb7928a99a9cb552a941895a6e586.jpg");
+ 			background-image: url("https://s1.1zoom.me/big0/953/Lilac_Vase_536182_1280x853.jpg");
   			height: 100%;
 			background-position: center;
  		        background-repeat: no-repeat;
@@ -19,8 +19,8 @@
  
 	<body>
 		<h1> WELCOME!! </h1><br>
-		<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJYjDmovHbWoR9Obhxx2B2pYnjIPrVRaOqzQ&usqp=CAU"><br><br>
-
+		
+		
 		<form action="login.php" method="POST">
 			<label for ="Username"><b>Username:<b></label>
 			<input type= "text" name= "Username" placeholder ="Username" id="Username"required><br><br>
@@ -29,10 +29,13 @@
 			<input type= "submit" name="Login"value="Login">
 			<input type="checkbox" name ="remember" value="1">Remember Me<br><br>
 		</form>
+		
 
 		<form action="register.php" method="POST">
 		<input type= "submit" name="Register" value="Register">
 		</form>
+		
+		
 	</body>
 
 </html>
