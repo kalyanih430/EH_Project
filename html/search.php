@@ -1,5 +1,22 @@
-<?php
+<html>
+<head>
 
+	<style>
+		body {
+ 			background-image: url("https://besthqwallpapers.com/Uploads/11-4-2020/128600/thumb2-purple-spring-flowers-flower-vase-stylish-pink-vase-flowers-on-the-table-spring.jpg");
+  			height: 100%;
+ 		        background-repeat: no-repeat;
+  			background-size: cover;
+			}
+		
+	</style>
+
+</head>
+</html>
+
+
+<?php
+session_start();
 $conn = mysqli_connect('localhost','admin','adpassword','EH_Project');
 if(!$conn)
 {
@@ -8,21 +25,29 @@ if(!$conn)
 
 if(isset($_POST['Search'])) {
 
-	$value = $_POST['searchvalue'];
-	$sql = "SELECT * from users where Name='$value'or 'x'='x' ";
-	$rs = mysqli_query($conn, $sql);
 	
-	while($row = mysqli_fetch_array($rs)) {
-		echo $row['Name']."<br>";
-		echo $row['email_address']."<br><br>";
-	} 
+
+	$value = $_POST['searchvalue'];
+
+	if(empty($value)){
+    		echo '<script>alert("Enter a name to search")</script>'; 
+		header("location: welcome.php");
+	}
+	echo "<br>";
+
+	$reg = "SELECT * from users where Name='$value'";
+	$run = mysqli_query($conn, $reg);
+	echo "<h2>Search Result</h2>";
+	while($row = mysqli_fetch_array($run)) {
+		
+		echo "Name: ".$row['Name']."<br>";
+		echo "Email Address: ".$row['email_address']."<br><br>";
+		}
+}
+else 
+	echo "Invalid entry";
+
 mysqli_free_result($rs);
 mysqli_close($conn);
-}
+
 ?>
-
-
-
-
-
-
