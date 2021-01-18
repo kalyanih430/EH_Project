@@ -12,6 +12,7 @@
 	</style>
 
 </head>
+
 </html>
 
 
@@ -25,28 +26,25 @@ if(!$conn)
 
 if(isset($_POST['Search'])) {
 
-	
-
 	$value = $_POST['searchvalue'];
-
-	if(empty($value)){
-    		echo '<script>alert("Enter a name to search")</script>'; 
-		header("location: welcome.php");
-	}
-	echo "<br>";
-
 	$reg = "SELECT * from users where Name='$value'";
 	$run = mysqli_query($conn, $reg);
-	echo "<h2>Search Result</h2>";
-	while($row = mysqli_fetch_array($run)) {
-		
-		echo "Name: ".$row['Name']."<br>";
-		echo "Email Address: ".$row['email_address']."<br><br>";
+	if(mysqli_num_rows($run) == 0)
+	{ 
+		echo "Enter a valid entry to search<br>";
+		$url = htmlspecialchars($_SERVER['HTTP_REFERER']);
+  		echo "<a href='$url'>Search again</a>"; 
+	}
+	else {
+		echo "<h2>Search Result</h2>";
+		while($row = mysqli_fetch_array($run)) 
+		{
+			echo "Name: ".$row['Name']."<br>";
+			echo "Email Address: ".$row['email_address']."<br><br>";
 		}
-}
-else 
-	echo "Invalid entry";
+	}
 
+}
 mysqli_free_result($rs);
 mysqli_close($conn);
 

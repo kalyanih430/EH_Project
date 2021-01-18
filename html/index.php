@@ -14,13 +14,24 @@
 			form {
     			display: inline-block;
 			}
+			.login{  
+        		width: 382px;  
+        		overflow: hidden;  
+       			margin: auto;  
+        		margin: 20 0 0 450px;  
+        		padding: 80px;  
+        		border-radius: 15px ; 
+			
+          
+			}
 		</style>
 	</head>
  
 	<body>
+		
+		
+		<div class="login"> 
 		<h1> WELCOME!! </h1><br>
-		
-		
 		<form action="login.php" method="POST">
 			<label for ="Username"><b>Username:<b></label>
 			<input type= "text" name= "Username" placeholder ="Username" id="Username"required><br><br>
@@ -34,7 +45,7 @@
 		<form action="register.php" method="POST">
 		<input type= "submit" name="Register" value="Register">
 		</form>
-		
+		</div> 
 		
 	</body>
 

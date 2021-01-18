@@ -27,6 +27,6 @@
 		setcookie('Username', $username, time()-1);
 		setcookie('Password', $password, time()-1);
 	}
-
-	echo "<h2>You successfully logged out.</h2><a href ='index.php'> login again </a>";
+        header("location: login.php");
+	
 ?>

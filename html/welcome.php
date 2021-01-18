@@ -55,8 +55,6 @@ echo "Login Successfull !! Welcome ".$_SESSION['Username'];
 </div>
 
 
-
-
 	  <form method='POST' action='functions.php'>
 		<h4>Post a comment:</h4>
 	  
